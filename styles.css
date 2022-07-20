@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --clr-primary: #6729A3;
+    --clr-secondary: rgba(0, 0, 0, 0.95);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    color: var(--clr-secondary);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* Header */
+header {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 0 0 10%;
+    background-color: var(--clr-secondary);
+    color: white;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+header .hero-text {
+    width: 60%;
+}
+
+header p {
+    margin: 30px 0;
+}
+
+a.button-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header .fa-eye {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+header .hero-image {
+    width: 40%;
+    min-height: 400px;
+    overflow: visible;
+    animation: banner 15s linear infinite;
+}
+
+.hero-image:hover {
+    animation-play-state: paused;
+    cursor: not-allowed;
+}
+
+header img {
+    width: 100%;
+}
+
+/* Header animation */
+@keyframes banner {
+    0% {
+        background: url('images/banners/neymar-banner.png');
+        background-repeat: no-repeat;
+        transform: scale(.8);
+    }
+
+    32% {
+        background: url('images/banners/neymar-banner.png');
+        background-repeat: no-repeat;
+        transform: scale(1.2);
+    }
+
+    33% {
+        background: transparent;
+    }
+
+    34% {
+        background: url('images/banners/messi-banner.png');
+        background-repeat: no-repeat;
+        transform: scale(.8);
+    }
+
+    67% {
+        background: url('images/banners/messi-banner.png');
+        background-repeat: no-repeat;
+        transform: scale(1.2);
+    }
+
+    68% {
+        background: transparent;
+    }
+
+    69% {
+        background: url('images/banners/ronaldo-banner.png');
+        background-repeat: no-repeat;
+        transform: scale(.8);
+    }
+
+    99% {
+        background: url('images/banners/ronaldo-banner.png');
+        background-repeat: no-repeat;
+        transform: scale(1.2);
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+/* Main section */
+main {
+    width: 80%;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Sidebar */
+aside {
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    height: max-content;
+    padding: 30px 20px;
+    margin-right: 20px;
+    background-color: #161616;
+    border-radius: 10px;
+}
+
+aside a {
+    display: inline-block;
+    text-decoration: none;
+    color: #161616;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+aside a:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+aside a:hover {
+    color: white;
+    background-color: var(--clr-primary);
+}
+
+aside .active {
+    color: white;
+    background-color: red;
+}
+
+/*----------
+    Footer 
+ ----------*/
+footer {
+    padding: 60px 0 40px;
+    margin-top: 60px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: var(--clr-secondary);
+}
+
+footer hr {
+    width: 80%;
+    margin: 40px auto;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+footer ul {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+footer ul.footer-links {
+    gap: 60px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+.footer-link:hover {
+    color: var(--clr-primary);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin: 50px 0 30px;
+}
+
+footer ul.footer-icons {
+    gap: 30px;
+}
+
+.footer-icons a {
+    text-decoration: none;
+}
+
+.footer-icons a {
+    display: block;
+    position: relative;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: 1px;
+    transition: .3s;
+}
+
+.footer-icons .fa-brands {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-icons a:hover {
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+}
+
+/* Blog page section */
+#blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    flex: 1;
+}
+
+.blog {
+    border: 1px solid #161616(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    border-top: 1px solid transparent;
+}
+
+.blog img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px 10px 0 0;
+}
+
+.blog-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    min-height: 156px;
+}
+
+a.blog-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-secondary);
+    background-color: white;
+    border: 1px solid var(--clr-secondary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 15px 0;
+    transition: .3s;
+}
+
+a.blog-link:hover {
+    color: white;
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+}
+
+.blog-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.post-time::before {
+    display: inline-block;
+    text-rendering: auto;
+    font: var(--fa-font-regular);
+    content: "\f017";
+    margin-right: 10px;
+}
+
+.post-comment::before {
+    display: inline-block;
+    text-rendering: auto;
+    font: var(--fa-font-regular);
+    content: "\f4ad";
+    margin-right: 10px;
+}
+
+/* Tablet only button */
+.tablet-show {
+    display: none;
+}
+
+/* Upcoming matches page section */
+#upcoming-matches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    flex: 1;
+}
+
+.u-match {
+    padding: 20px 5%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.u-match .team-flags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.team-flags img {
+    width: 30%;
+}
+
+.team-name {
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.match-time {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* All groups page section */
+#all-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
+    gap: 20px;
+    flex: 1;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.group h4 {
+    color: var(--clr-primary);
+}
+
+.group .country {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: rgba(255, 228, 196, 0.9);
+    border-radius: 5px;
+}
+
+.country img {
+    margin: 0 30px;
+    justify-self: center;
+}
+
+
+/* Responsive for tablet */
+@media screen and (max-width: 992px) {
+
+    /* Header */
+    header {
+        width: 90%;
+        padding: 40px 0 0 5%;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    header p {
+        margin: 20px 0;
+    }
+
+    a.button-link {
+        padding: 10px 15px;
+    }
+
+    /* Main section */
+    main {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /* Sidebar */
+    aside {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        margin: 30px 0;
+        padding: 0;
+        position: relative;
+    }
+
+    aside a.sidebar-link {
+        display: block;
+        margin-bottom: 0;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    /* Footer */
+    footer ul.footer-links {
+        row-gap: 30px;
+    }
+
+    /* Blog page section */
+    #blogs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .blog-details {
+        min-height: 178px;
+    }
+
+    .blog {
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Tablet only button */
+    #blogs .tablet-hide {
+        display: none;
+    }
+
+    .tablet-show {
+        display: block;
+        align-self: center;
+        margin-top: 30px;
+    }
+
+    /* Upcoming matches page section */
+    #upcoming-matches {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* All groups page section */
+    #all-groups {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 15px;
+    }
+
+    .group {
+        padding: 15px;
+    }
+
+    .group .country {
+        padding: 15px;
+    }
+}
+
+
+/* Responsive for phone */
+@media screen and (max-width: 576px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 0;
+        margin: 10px auto 0;
+    }
+
+    header .hero-text {
+        width: 80%;
+    }
+
+    header .hero-image {
+        width: 100%;
+        align-self: center;
+        margin-top: 40px;
+    }
+
+    /* Sidebar */
+    aside {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside a {
+        width: max-content;
+    }
+
+    aside a:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 60px 0 40px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    /* Blog section */
+    #blogs {
+        grid-template-columns: 1fr;
+    }
+
+    .blog {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .blog-details {
+        min-height: max-content;
+    }
+
+    /* Tablet only button */
+    .tablet-show {
+        display: none;
+    }
+
+    /* Upcoming matches page section */
+    #upcoming-matches {
+        grid-template-columns: 1fr;
+    }
+}
